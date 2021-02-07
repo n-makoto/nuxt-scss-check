@@ -31,7 +31,11 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  mounted() {
+    console.log(process.env.VUE_APP_API_ENDPOINT)
+  }
+})
 </script>
 
 <style lang="scss" scoped>
