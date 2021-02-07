@@ -1,5 +1,43 @@
 require('dotenv').config()
 
+const extractEnv = ({
+                      NODE_ENV,
+                      VUE_APP_API_ENDPOINT,
+                      VUE_APP_FIREBASE_API_KEY,
+                      VUE_APP_FIREBASE_AUTH_DOMAIN,
+                      VUE_APP_FIREBASE_DATABASE_URL,
+                      VUE_APP_FIREBASE_PROJECT_ID,
+                      VUE_APP_FIREBASE_STORAGE_BUCKET,
+                      VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+                      VUE_APP_SMARTLOOK_ENABLE_REG,
+                      VUE_APP_SMARTLOOK_API_KEY,
+                      VUE_APP_DISABLE_SET_INTERVAL,
+                      VUE_APP_REVISION_ID,
+                      VUE_CLI_KEEP_TEST_ATTRS,
+                      VUE_APP_HELP_URL,
+                      VUE_APP_I18N_LOCALE,
+                      VUE_APP_I18N_FALLBACK_LOCALE
+                    }) => {
+  return {
+    NODE_ENV,
+    VUE_APP_API_ENDPOINT,
+    VUE_APP_FIREBASE_API_KEY,
+    VUE_APP_FIREBASE_AUTH_DOMAIN,
+    VUE_APP_FIREBASE_DATABASE_URL,
+    VUE_APP_FIREBASE_PROJECT_ID,
+    VUE_APP_FIREBASE_STORAGE_BUCKET,
+    VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+    VUE_APP_SMARTLOOK_ENABLE_REG,
+    VUE_APP_SMARTLOOK_API_KEY,
+    VUE_APP_DISABLE_SET_INTERVAL,
+    VUE_APP_REVISION_ID,
+    VUE_CLI_KEEP_TEST_ATTRS,
+    VUE_APP_HELP_URL,
+    VUE_APP_I18N_LOCALE,
+    VUE_APP_I18N_FALLBACK_LOCALE
+  }
+}
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -56,5 +94,5 @@ export default {
   build: {
   },
 
-  env: process.env
+  env: extractEnv(process.env)
 }
