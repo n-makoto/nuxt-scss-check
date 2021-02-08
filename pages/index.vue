@@ -33,6 +33,9 @@ import Vue from 'vue'
 
 export default Vue.extend({
   mounted() {
+    const ieCheck = () => {
+      alert(Array.from('InternetExplorer'))
+    }
     console.log(process.env.VUE_APP_API_ENDPOINT)
   }
 })
