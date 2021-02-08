@@ -36,6 +36,7 @@ export default Vue.extend({
     const ieCheck = () => {
       alert(Array.from('InternetExplorer'))
     }
+    ieCheck()
     console.log(process.env.VUE_APP_API_ENDPOINT)
   }
 })
